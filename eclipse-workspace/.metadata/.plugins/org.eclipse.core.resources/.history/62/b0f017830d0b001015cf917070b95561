@@ -1,0 +1,31 @@
+package com.ignek.intranet.count.of.configuration;
+
+import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
+import com.ignek.intranet.count.of.constants.CountOfPortletKeys;
+import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+import aQute.bnd.annotation.metatype.Meta;
+
+@ExtendedObjectClassDefinition(
+	category = "count", scope = ExtendedObjectClassDefinition.Scope.PORTLET_INSTANCE
+)
+@Meta.OCD(
+	id = CountOfPortletKeys.COUNTOFCONFIGURATION,
+	name = "countOf"
+)
+public interface CountOfConfiguration {
+	
+	@Meta.AD(
+		deflt="Users", name="countOf",
+		optionLabels = {"Users", "Articles", "Documents","DhavalSojitra"},
+		optionValues = {"Users", "Articles", "Documents","DhavalSojitra"}, 
+		required = false
+	)
+	public String countOf();
+
+}

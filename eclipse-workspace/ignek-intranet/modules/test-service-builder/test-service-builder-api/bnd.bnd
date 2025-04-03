@@ -1,0 +1,10 @@
+Bundle-Name: test-service-builder-api
+Bundle-SymbolicName: com.ignek.com.test.service.builder.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.ignek.com.test.service.builder.exception,\
+	com.ignek.com.test.service.builder.model,\
+	com.ignek.com.test.service.builder.service,\
+	com.ignek.com.test.service.builder.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../test-service-builder-service/service.xml

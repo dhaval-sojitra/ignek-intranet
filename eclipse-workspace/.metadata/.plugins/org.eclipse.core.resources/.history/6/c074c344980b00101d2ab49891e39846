@@ -1,0 +1,6 @@
+javax.portlet.title.ignek_intranet_count_of_CountOfPortlet=CountOf
+countof.caption=Hello from CountOf!
+
+category.countOf = Count Of
+
+category-section.countOf = CountOf Portlet

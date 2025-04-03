@@ -1,0 +1,119 @@
+package com.ignek.intranet.count.of.portlet;
+
+import com.ignek.intranet.count.of.configuration.CountOfConfiguration;
+import com.ignek.intranet.count.of.constants.CountOfPortletKeys;
+import com.liferay.document.library.kernel.service.DLFileEntryLocalService;
+import com.liferay.journal.service.JournalArticleLocalService;
+import com.liferay.petra.string.StringPool;
+import com.liferay.portal.configuration.module.configuration.ConfigurationProvider;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.module.configuration.ConfigurationException;
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.liferay.portal.kernel.service.UserLocalService;
+import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.Validator;
+import com.liferay.portal.kernel.util.WebKeys;
+
+import java.io.IOException;
+
+import javax.portlet.Portlet;
+import javax.portlet.PortletException;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
+
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+
+/**
+ * @author dhaval
+ */
+@Component(
+	configurationPid = CountOfPortletKeys.COUNTOFCONFIGURATION,
+	property = {
+		"com.liferay.portlet.display-category=category.sample",
+		"com.liferay.portlet.header-portlet-css=/css/main.css",
+		"com.liferay.portlet.instanceable=true",
+		"javax.portlet.display-name=CountOf",
+		"javax.portlet.init-param.config-template=/confuguration.jsp",
+		"javax.portlet.init-param.view-template=/view.jsp",
+		"javax.portlet.name=" + CountOfPortletKeys.COUNTOF,
+		"javax.portlet.resource-bundle=content.Language",
+		"javax.portlet.security-role-ref=power-user,user"
+	},
+	service = Portlet.class
+)
+public class CountOfPortlet extends MVCPortlet {
+
+	@Override
+	public void render(RenderRequest renderRequest, RenderResponse renderResponse)
+			throws IOException, PortletException {
+
+		renderRequest.setAttribute(CountOfConfiguration.class.getName(), portletConfiguration(renderRequest));
+
+		CountOfConfiguration countOfConfiguration = (CountOfConfiguration) renderRequest
+				.getAttribute(CountOfConfiguration.class.getName());
+
+		String countOfValue = countOfConfiguration.countOf();
+
+		if (Validator.isBlank(countOfValue) || countOfValue.equals("Users")) {
+
+			int users = _userLocalService.getUsersCount();
+			renderRequest.setAttribute("countOfValue", Integer.toString(users));
+
+			_log.info("Total User:" + users);
+
+		} else if (countOfValue.equals("Articles")) {
+
+			int articles = _jourArticleLocalService.getJournalArticlesCount();
+			renderRequest.setAttribute("countOfValue", Integer.toString(articles));
+
+			_log.info("Total Articles:" + articles);
+
+		} else if (countOfValue.equals("Documents")) {
+
+			int documents = _dlFileEntryLocalService.getDLFileEntriesCount();
+			renderRequest.setAttribute("countOfValue", Integer.toString(documents));
+
+			_log.info("Total documents:" + documents);
+
+		} else {
+			renderRequest.setAttribute("countOfValue", StringPool.BLAN);
+		}
+
+		super.render(renderRequest, renderResponse);
+	}
+
+	private CountOfConfiguration portletConfiguration(RenderRequest renderRequest) throws PortletException {
+
+		ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
+
+		try {
+			CountOfConfiguration portletConfiguration = _configurationProvider
+					.getPortletInstanceConfiguration(CountOfConfiguration.class, themeDisplay);
+
+			String countOf = portletConfiguration.countOf();
+			_log.info("Count Of : " + countOf);
+
+			return portletConfiguration;
+
+		} catch (ConfigurationException configurationException) {
+			throw new PortletException(configurationException);
+		}
+	}
+
+	private static final Log _log = LogFactoryUtil.getLog(CountOfPortlet.class);
+
+	@Reference
+	private ConfigurationProvider _configurationProvider;
+
+	@Reference
+	private UserLocalService _userLocalService;
+
+	@Reference
+	private JournalArticleLocalService _jourArticleLocalService;
+
+	@Reference
+	private DLFileEntryLocalService _dlFileEntryLocalService;
+
+}

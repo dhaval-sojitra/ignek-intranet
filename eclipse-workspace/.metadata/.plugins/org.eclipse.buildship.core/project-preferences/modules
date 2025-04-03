@@ -1,0 +1,12 @@
+#
+#Wed Apr 02 20:00:08 IST 2025
+derivedResources=.gradle\:build\:color-configuration/build\:countof/build\:hello-world/build\:liferay-n2f3/build\:test-project/build\:liferay-n2f3/n2f3-web/build
+linkedResources=
+classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n</classpath>\n
+managedNatures=
+buildDir=build
+managedBuilders=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><commands/>
+buildScriptPath=build.gradle
+subprojectPaths=color-configuration\:countof\:hello-world\:liferay-n2f3\:test-project\:liferay-n2f3/n2f3-web
+hasAutoBuildTasks=false
+gradleVersion=8.5

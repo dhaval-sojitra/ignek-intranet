@@ -1,0 +1,20 @@
+
+.theme{
+    padding-left: 0;
+}
+.theme-content {
+    height: 100vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+@media (min-width: 768px) {
+
+    html:not(#__):not(#___) .controls-visible .portlet:hover>.cadmin.portlet-topper,
+    html:not(#__):not(#___) .controls-visible .portlet.open>.cadmin.portlet-topper,
+    html:not(#__):not(#___) .controls-visible .portlet.focus>.cadmin.portlet-topper {
+        opacity: 1;
+        transform: translateY(-52%);
+    }
+}

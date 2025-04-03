@@ -1,0 +1,7 @@
+Bundle-Name: countof
+Bundle-SymbolicName: com.ignek.intranet.count.of
+Bundle-Version: 1.0.0
+Export-Package: com.ignek.intranet.count.of.constants
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"

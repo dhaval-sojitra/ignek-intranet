@@ -1,0 +1,11 @@
+INDEX VERSION 1.134
+/home/dell/work/projects/ignek-intranet/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2144683455.index
+/color-configuration/src/main/java
+/home/dell/work/projects/ignek-intranet/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/212948493.index
+/n2f3-web/src/main/java
+/home/dell/work/projects/ignek-intranet/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2078823805.index
+/test-project/src/main/java
+/home/dell/work/projects/ignek-intranet/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/531557404.index
+/countof/src/main/java
+/home/dell/work/projects/ignek-intranet/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4262375173.index
+/hello-world/src/main/java

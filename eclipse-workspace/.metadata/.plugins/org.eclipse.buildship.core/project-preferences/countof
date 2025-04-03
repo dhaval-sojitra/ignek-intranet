@@ -1,0 +1,12 @@
+#
+#Wed Apr 02 20:00:08 IST 2025
+derivedResources=.gradle\:build
+linkedResources=
+classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n<classpathentry kind\="lib" path\="/home/dell/.gradle/caches/modules-2/files-2.1/com.liferay.portal/release.portal.api/7.4.3.120/c0fda2dcedc3935e544a671df154e875cff4d22e/release.portal.api-7.4.3.120.jar" sourcepath\="/home/dell/.gradle/caches/modules-2/files-2.1/com.liferay.portal/release.portal.api/7.4.3.120/9918cc2de4e42afbec9e48ea5c09d2d6ac4182df/release.portal.api-7.4.3.120-sources.jar">\n\t<attributes>\n\t\t<attribute name\="gradle_used_by_scope" value\=""/>\n\t</attributes>\n</classpathentry>\n</classpath>\n
+managedNatures=org.eclipse.jdt.core.javanature\:com.liferay.ide.core.liferayNature
+buildDir=build
+managedBuilders=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><commands/>
+buildScriptPath=build.gradle
+subprojectPaths=
+hasAutoBuildTasks=false
+gradleVersion=8.5

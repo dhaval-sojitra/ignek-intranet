@@ -1,0 +1,56 @@
+.sidebar {
+    height: 100vh;
+    background-color: #F0F1F1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+
+    .logo {
+        display: flex;
+        margin-left: 25px;
+        margin-top: 18px;
+
+        p {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 100%;
+            letter-spacing: 0%;
+        }
+    }
+
+    .line {
+        height: 30px;
+        border-left: 4px solid #00979E;
+        margin-right: 12.5px;
+    }
+
+    .profile {
+        align-items: center;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            border-radius: 50%;
+            height: 132px;
+            width: 132px;
+        }
+    }
+
+    .designation {
+        color: #00979E;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .user-name {
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+}

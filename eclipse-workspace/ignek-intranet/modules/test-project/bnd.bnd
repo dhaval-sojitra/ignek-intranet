@@ -1,0 +1,7 @@
+Bundle-Name: Test Project
+Bundle-SymbolicName: com.ingnek.intranet
+Bundle-Version: 1.0.0
+Export-Package: com.ingnek.intranet.constants
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"

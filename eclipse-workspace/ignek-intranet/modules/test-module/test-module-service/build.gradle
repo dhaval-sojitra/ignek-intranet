@@ -1,0 +1,12 @@
+dependencies {
+	api project(":modules:test-module:test-module-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../test-module-api/src/main/java"
+	testDir = "../test-module-test/src/testIntegration/java"
+}
+
+group = "com.test.module"

@@ -1,0 +1,7 @@
+Bundle-Name: color-configuration
+Bundle-SymbolicName: ignek.intranet.color
+Bundle-Version: 1.0.0
+Export-Package: ignek.intranet.color.constants
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"

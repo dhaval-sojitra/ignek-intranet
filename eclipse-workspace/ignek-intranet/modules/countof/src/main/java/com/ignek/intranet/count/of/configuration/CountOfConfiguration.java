@@ -1,0 +1,25 @@
+package com.ignek.intranet.count.of.configuration;
+
+import com.ignek.intranet.count.of.constants.CountOfPortletKeys;
+import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition;
+
+import aQute.bnd.annotation.metatype.Meta;
+
+@ExtendedObjectClassDefinition(
+	category = "countOf", scope = ExtendedObjectClassDefinition.Scope.PORTLET_INSTANCE
+)
+@Meta.OCD(
+	id = CountOfPortletKeys.COUNTOFCONFIGURATION,
+	name = "countOf"
+)
+public interface CountOfConfiguration {
+	
+	@Meta.AD(
+		deflt="Users", name="countOf",
+		optionLabels = {"Users", "Articles", "Documents"},
+		optionValues = {"Users", "Articles", "Documents"}, 
+		required = false
+	)
+	public String countOf();
+
+}

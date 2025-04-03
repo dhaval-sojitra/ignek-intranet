@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="/home/dell/work/software/LiferayWorkspacewithDevStudio/liferay-developer-studio/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.13.v20241023-1126/jre" version="17.0.13"/>
+    <libraryInfo home="/home/dell/work/software/LiferayWorkspacewithDevStudio/liferay-developer-studio/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.13.v20241023-1126" version="17.0.13"/>
+    <libraryInfo home="/usr/lib/jvm/zulu21-ca-amd64" version="21.0.6"/>
+    <libraryInfo home="/usr/lib/jvm/java-11-openjdk-amd64" version="11.0.26"/>
+</libraryInfos>
